@@ -18,8 +18,8 @@ nav {
     display: none;
     flex-direction: column;
     position: fixed;
-    top: 20px;  /* Adjust the top position as needed */
-    right: 20px; /* Adjust the right position as needed */
+    top: 20px;
+    right: 20px;
     background-color: #333;
     padding: 20px;
     border-radius: 10px;
@@ -50,14 +50,13 @@ nav li {
 nav a {
     text-decoration: none;
     color: white;
-    font-family: 'Segoe UI', sans-serif; /* Updated font for menu buttons */
+    font-family: 'Segoe UI', sans-serif;
     font-size: 1.2em;
 }
 
 main {
     flex-grow: 1;
-    background: url('images/flower-titlescreen.jpg') center/cover no-repeat;
-    background-size: cover;
+    background: url('images/flower-titlescreen.jpg') center/cover no-repeat fixed;
     position: relative;
 }
 
@@ -87,6 +86,8 @@ p {
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
     text-align: center;
     color: white;
     background-color: #555;
@@ -97,10 +98,9 @@ footer {
 
 footer p {
     font-size: 0.8em;
-    font-family: 'Segoe UI', sans-serif; /* Updated font for the footer */
+    font-family: 'Segoe UI', sans-serif;
 }
 
-/* Responsive styles for small screens */
 @media only screen and (max-width: 600px) {
     nav ul {
         display: none;
@@ -117,9 +117,9 @@ footer p {
 
     nav ul.show {
         display: flex;
-        background-color: transparent; /* Remove the background-color property */
+        background-color: transparent;
     }
-    
+
     nav li {
         display: block;
         margin: 10px 0;
@@ -140,7 +140,7 @@ footer p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.900); /* Adjust the alpha value for transparency and the color values for darkness */
+    background: rgba(0, 0, 0, 0.900);
     z-index: 999;
 }
 
