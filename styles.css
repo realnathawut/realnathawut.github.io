@@ -17,9 +17,14 @@ nav {
     cursor: pointer;
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 10px; /* Adjust as needed based on your design */
-    right: 10px; /* Move the burger menu to the right side */
+    position: fixed;
+    top: 20px;  /* Adjust the top position as needed */
+    right: 20px; /* Adjust the right position as needed */
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
 .bar {
@@ -45,7 +50,7 @@ nav li {
 nav a {
     text-decoration: none;
     color: white;
-    font-family: 'Italianno', cursive;
+    font-family: 'Segoe UI', sans-serif; /* Updated font for menu buttons */
     font-size: 1.2em;
 }
 
@@ -92,6 +97,7 @@ footer {
 
 footer p {
     font-size: 0.8em;
+    font-family: 'Segoe UI', sans-serif; /* Updated font for the footer */
 }
 
 /* Responsive styles for small screens */
@@ -100,17 +106,20 @@ footer p {
         display: none;
         flex-direction: column;
         text-align: center;
-        position: absolute;
-        top: 50px; /* Adjust as needed based on your header height */
-        left: 0;
-        width: 100%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
         background-color: #333;
+        z-index: 999;
     }
 
     nav ul.show {
         display: flex;
+        background-color: transparent; /* Remove the background-color property */
     }
-
+    
     nav li {
         display: block;
         margin: 10px 0;
@@ -118,5 +127,23 @@ footer p {
 
     .burger-menu {
         display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
     }
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.900); /* Adjust the alpha value for transparency and the color values for darkness */
+    z-index: 999;
+}
+
+.overlay.show {
+    display: block;
 }
