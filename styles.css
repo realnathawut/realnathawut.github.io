@@ -52,13 +52,25 @@ nav a {
     color: white;
     font-family: 'Segoe UI', sans-serif;
     font-size: 1.2em;
+    transition: color 0.3s ease; /* Added transition for hover effect */
+}
+
+nav a:hover {
+    color: #c09918; /* Choose your desired hover font color */
 }
 
 main {
     flex-grow: 1;
+    background-color: #f5f5dc;
+    position: relative;
+}
+
+.home {
+    flex-grow: 1;
     background: url('images/flower-titlescreen.jpg') center/cover no-repeat fixed;
     position: relative;
 }
+
 
 header {
     position: absolute;
@@ -111,7 +123,8 @@ footer p {
         left: 50%;
         transform: translate(-50%, -50%);
         width: 80%;
-        background-color: #333;
+        /* Remove the background-color property in mobile view */
+        background-color: transparent;
         z-index: 999;
     }
 
@@ -130,6 +143,17 @@ footer p {
         position: fixed;
         top: 20px;
         right: 20px;
+        background-color: #333;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+
+    /* Remove the background-color property for the nav bar in mobile view */
+    nav {
+        background-color: transparent;
+        padding: 0;
     }
 }
 
@@ -146,4 +170,19 @@ footer p {
 
 .overlay.show {
     display: block;
+}
+
+
+/* New styles for anmelden.html */
+
+
+h1 {
+    font-family: 'Italianno', cursive; /* Same font as header in index.html */
+    margin: 20px; /* Adjust the margin as needed */
+}
+
+/* Font style for submit form in anmelden.html */
+form {
+    font-family: 'Segoe UI', sans-serif; /* Same font as footer in index.html */
+    margin: 20px; /* Adjust the margin as needed */
 }

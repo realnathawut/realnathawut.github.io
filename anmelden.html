@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+    <title>An-/Abmelden</title>
+</head>
+
+<body>
+    <div class="overlay" onclick="closeNav()"></div>
+    <nav>
+        <div class="burger-menu" onclick="toggleNav()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ablauf.html">Ablauf</a></li>
+            <li><a href="anmelden.html">An-/Abmelden</a></li>
+            <li><a href="geschenkeliste.html">Geschenkeliste</a></li>
+            <li><a href="fotogallerie.html">Fotogallerie</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>An-/Abmelden</h1>
+        <form>
+            <!-- Your form elements go here -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <footer>
+        <p>© 2024 Nathanael Meyer</p>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            var navLinks = document.querySelector('.nav-links');
+            var overlay = document.querySelector('.overlay');
+            navLinks.classList.toggle('show');
+            overlay.classList.toggle('show');
+
+            // Toggle the background color of the nav-links when the burger-menu is opened
+            if (navLinks.classList.contains('show')) {
+                document.body.style.backgroundColor = 'transparent'; // Set your desired background color
+            } else {
+                document.body.style.backgroundColor = ''; // Reset to the default background color
+            }
+        }
+
+        function closeNav() {
+            var navLinks = document.querySelector('.nav-links');
+            var overlay = document.querySelector('.overlay');
+            navLinks.classList.remove('show');
+            overlay.classList.remove('show');
+            document.body.style.backgroundColor = ''; // Reset to the default background color
+        }
+    </script>
+</body>
+
+</html>
