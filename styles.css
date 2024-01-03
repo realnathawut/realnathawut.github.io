@@ -7,12 +7,17 @@ body {
     position: relative;
 }
 
+/* Navigation Bar Styles */
 nav {
     background-color: #333;
     padding: 10px;
     text-align: center;
+    position: fixed; /* Fixed position for the navigation bar */
+    width: 100%; /* Full-width navigation bar */
+    z-index: 999; /* Higher z-index to ensure it's above other elements */
 }
 
+/* Burger Menu Styles */
 .burger-menu {
     cursor: pointer;
     display: none;
@@ -27,13 +32,16 @@ nav {
     z-index: 1000;
 }
 
+/* Burger Menu Bar Styles */
 .bar {
     width: 30px;
     height: 3px;
     background-color: white;
     margin: 6px 0;
+    border: 1px solid black; /* Added border for each line in the burger menu */
 }
 
+/* Navigation List Styles */
 nav ul {
     list-style: none;
     margin: 0;
@@ -42,36 +50,43 @@ nav ul {
     justify-content: center;
 }
 
+/* Navigation List Item Styles */
 nav li {
     display: inline;
     margin-right: 15px;
 }
 
+/* Navigation Link Styles */
 nav a {
     text-decoration: none;
     color: white;
     font-family: 'Segoe UI', sans-serif;
     font-size: 1.2em;
-    transition: color 0.3s ease; /* Added transition for hover effect */
+    transition: color 0.3s ease;
 }
 
+/* Navigation Link Hover Styles */
 nav a:hover {
-    color: #c09918; /* Choose your desired hover font color */
+    color: #c09918;
 }
 
+/* Main Content Styles */
 main {
     flex-grow: 1;
     background-color: #f5f5dc;
     position: relative;
+    padding-top: 60px;
+    padding-left: 20px;
 }
 
+/* Home Section Styles */
 .home {
     flex-grow: 1;
     background: url('images/flower-titlescreen.jpg') center/cover no-repeat fixed;
     position: relative;
 }
 
-
+/* Header Styles */
 header {
     position: absolute;
     top: 50%;
@@ -87,16 +102,20 @@ header {
     font-family: 'Italianno', cursive;
 }
 
+/* Heading Styles */
 h1 {
     margin: 0;
     font-size: 4em;
+    font-family: 'Italianno', cursive;
 }
 
+/* Paragraph Styles */
 p {
     margin: 0;
     font-size: 2em;
 }
 
+/* Footer Styles */
 footer {
     position: fixed;
     bottom: 0;
@@ -108,11 +127,13 @@ footer {
     box-sizing: border-box;
 }
 
+/* Footer Paragraph Styles */
 footer p {
     font-size: 0.8em;
     font-family: 'Segoe UI', sans-serif;
 }
 
+/* Media Query for Mobile View */
 @media only screen and (max-width: 600px) {
     nav ul {
         display: none;
@@ -123,7 +144,6 @@ footer p {
         left: 50%;
         transform: translate(-50%, -50%);
         width: 80%;
-        /* Remove the background-color property in mobile view */
         background-color: transparent;
         z-index: 999;
     }
@@ -138,12 +158,13 @@ footer p {
         margin: 10px 0;
     }
 
+    /* Styles for Burger Menu in Mobile View */
     .burger-menu {
         display: block;
         position: fixed;
         top: 20px;
         right: 20px;
-        background-color: #33333360;
+        background: none;
         padding: 8px;
         border-radius: 10px;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -157,6 +178,7 @@ footer p {
     }
 }
 
+/* Overlay Styles */
 .overlay {
     display: none;
     position: fixed;
@@ -172,12 +194,12 @@ footer p {
     display: block;
 }
 
-/* Add this at the end of your styles.css file */
-
+/* Navigation Item Styles */
 .nav-item {
     display: inline;
 }
 
+/* Navigation Link Styles */
 .nav-link {
     text-decoration: none;
     color: white;
@@ -186,22 +208,19 @@ footer p {
     transition: color 0.3s ease;
 }
 
+/* Navigation Icon Styles */
 .nav-icon {
-    width: 24px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 24px;
+    height: auto;
     vertical-align: middle;
 }
 
-
-
-/* New styles for anmelden.html */
-h1 {
-    font-family: 'Italianno', cursive; /* Same font as header in index.html */
-    margin: 20px; /* Adjust the margin as needed */
+/* Styles for other Pages */
+body.default {
+    padding-top: 60px; /* Adjust the padding-top to match the height of your navigation bar */
 }
 
-/* Font style for submit form in anmelden.html */
 form {
-    font-family: 'Segoe UI', sans-serif; /* Same font as footer in index.html */
-    margin: 20px; /* Adjust the margin as needed */
+    font-family: 'Segoe UI', sans-serif;
+    margin: 20px;
 }
