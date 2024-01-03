@@ -143,10 +143,10 @@ footer p {
         position: fixed;
         top: 20px;
         right: 20px;
-        background-color: #333;
-        padding: 20px;
+        background-color: #33333360;
+        padding: 8px;
         border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
         z-index: 1000;
     }
 
