@@ -172,10 +172,29 @@ footer p {
     display: block;
 }
 
+/* Add this at the end of your styles.css file */
+
+.nav-item {
+    display: inline;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.nav-icon {
+    width: 24px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle;
+}
+
+
 
 /* New styles for anmelden.html */
-
-
 h1 {
     font-family: 'Italianno', cursive; /* Same font as header in index.html */
     margin: 20px; /* Adjust the margin as needed */
