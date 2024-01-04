@@ -18,7 +18,8 @@
             <div class="bar"></div>
         </div>
         <ul class="nav-links">
-            <li class="nav-item"><a href="index.html" class="nav-link"><img src="images/rings.png" alt="Home" class="nav-icon"></a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link"><img src="images/rings.png" alt="Home"
+                        class="nav-icon"></a></li>
             <li><a href="ablauf.html">Ablauf</a></li>
             <li><a href="anmelden.html">An-/Abmelden</a></li>
             <li><a href="geschenkeliste.html">Geschenkeliste</a></li>
@@ -26,13 +27,17 @@
         </ul>
     </nav>
     <main>
-        <h1>An-/Abmelden</h1>
+        <h1 class="default">An-/Abmelden</h1>
         <form>
-            <!-- Your form elements go here -->
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name"><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email"><br><br>
+            <label for="vorname">Vorname:</label>
+            <input type="text" id="vorname" name="vorname">
+
+            <label for="nachname">Nachname:</label>
+            <input type="text" id="nachname" name="nachname">
+
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email">
+
             <input type="submit" value="Submit">
         </form>
     </main>
@@ -40,29 +45,8 @@
         <p>© 2024 Nathanael Meyer</p>
     </footer>
 
-    <script>
-        function toggleNav() {
-            var navLinks = document.querySelector('.nav-links');
-            var overlay = document.querySelector('.overlay');
-            navLinks.classList.toggle('show');
-            overlay.classList.toggle('show');
+    <script src="script.js"></script>
 
-            // Toggle the background color of the nav-links when the burger-menu is opened
-            if (navLinks.classList.contains('show')) {
-                document.body.style.backgroundColor = 'transparent'; // Set your desired background color
-            } else {
-                document.body.style.backgroundColor = ''; // Reset to the default background color
-            }
-        }
-
-        function closeNav() {
-            var navLinks = document.querySelector('.nav-links');
-            var overlay = document.querySelector('.overlay');
-            navLinks.classList.remove('show');
-            overlay.classList.remove('show');
-            document.body.style.backgroundColor = ''; // Reset to the default background color
-        }
-    </script>
 </body>
 
 </html>

@@ -7,17 +7,15 @@ body {
     position: relative;
 }
 
-/* Navigation Bar Styles */
 nav {
     background-color: #333;
     padding: 10px;
     text-align: center;
-    position: fixed; /* Fixed position for the navigation bar */
-    width: 100%; /* Full-width navigation bar */
-    z-index: 999; /* Higher z-index to ensure it's above other elements */
+    position: fixed;
+    width: 100%;
+    z-index: 999;
 }
 
-/* Burger Menu Styles */
 .burger-menu {
     cursor: pointer;
     display: none;
@@ -32,16 +30,27 @@ nav {
     z-index: 1000;
 }
 
-/* Burger Menu Bar Styles */
 .bar {
     width: 30px;
     height: 3px;
     background-color: white;
     margin: 6px 0;
-    border: 1px solid black; /* Added border for each line in the burger menu */
+    border: 1px solid black;
 }
 
-/* Navigation List Styles */
+/* Burger Menu Bar Styles for Cross Effect */
+.burger-menu.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger-menu.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
 nav ul {
     list-style: none;
     margin: 0;
@@ -50,13 +59,11 @@ nav ul {
     justify-content: center;
 }
 
-/* Navigation List Item Styles */
 nav li {
     display: inline;
     margin-right: 15px;
 }
 
-/* Navigation Link Styles */
 nav a {
     text-decoration: none;
     color: white;
@@ -65,12 +72,10 @@ nav a {
     transition: color 0.3s ease;
 }
 
-/* Navigation Link Hover Styles */
 nav a:hover {
     color: #c09918;
 }
 
-/* Main Content Styles */
 main {
     flex-grow: 1;
     background-color: #f5f5dc;
@@ -79,14 +84,12 @@ main {
     padding-left: 20px;
 }
 
-/* Home Section Styles */
 .home {
     flex-grow: 1;
-    background: url('images/flower-titlescreen.jpg') center/cover no-repeat fixed;
+    background: url('images/cover.jpg') center/cover no-repeat fixed;
     position: relative;
 }
 
-/* Header Styles */
 header {
     position: absolute;
     top: 50%;
@@ -102,20 +105,19 @@ header {
     font-family: 'Italianno', cursive;
 }
 
-/* Heading Styles */
 h1 {
     margin: 0;
     font-size: 4em;
     font-family: 'Italianno', cursive;
+    text-align: center;
+    box-sizing: border-box;
 }
 
-/* Paragraph Styles */
 p {
     margin: 0;
     font-size: 2em;
 }
 
-/* Footer Styles */
 footer {
     position: fixed;
     bottom: 0;
@@ -127,7 +129,6 @@ footer {
     box-sizing: border-box;
 }
 
-/* Footer Paragraph Styles */
 footer p {
     font-size: 0.8em;
     font-family: 'Segoe UI', sans-serif;
@@ -158,7 +159,6 @@ footer p {
         margin: 10px 0;
     }
 
-    /* Styles for Burger Menu in Mobile View */
     .burger-menu {
         display: block;
         position: fixed;
@@ -171,14 +171,18 @@ footer p {
         z-index: 1000;
     }
 
-    /* Remove the background-color property for the nav bar in mobile view */
     nav {
         background-color: transparent;
         padding: 0;
     }
+
+    form {
+        width: 80%;
+        max-width: 80%;
+        margin: 20px auto;
+    }
 }
 
-/* Overlay Styles */
 .overlay {
     display: none;
     position: fixed;
@@ -194,12 +198,10 @@ footer p {
     display: block;
 }
 
-/* Navigation Item Styles */
 .nav-item {
     display: inline;
 }
 
-/* Navigation Link Styles */
 .nav-link {
     text-decoration: none;
     color: white;
@@ -208,19 +210,59 @@ footer p {
     transition: color 0.3s ease;
 }
 
-/* Navigation Icon Styles */
 .nav-icon {
     width: 24px;
     height: auto;
     vertical-align: middle;
 }
 
+
 /* Styles for other Pages */
 body.default {
-    padding-top: 60px; /* Adjust the padding-top to match the height of your navigation bar */
+    padding-top: 60px;
+}
+
+h1.default {
+    margin: 20px auto;
+    font-size: 4em;
+    font-family: 'Italianno', cursive;
+    text-align: left;
+    display: table;
 }
 
 form {
     font-family: 'Segoe UI', sans-serif;
-    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+label {
+    font-size: 1.2em;
+    margin-bottom: 0;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    font-family: 'Segoe UI', sans-serif;
+    width:fit-content;
+    font-size: 1.5em;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
 }
